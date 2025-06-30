@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KP Auto Parts Japan</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header {
+      background: url('logo.jpg') no-repeat center/cover;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+    nav {
+      background: #222; color: white;
+      display: flex; justify-content: space-between; padding: 10px 20px;
+    }
+    nav a { color: white; text-decoration: none; margin: 0 10px; }
+    section { padding: 20px; }
+    .product-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product-item {
+      border: 1px solid #ccc; padding: 10px;
+      border-radius: 8px; text-align: center;
+    }
+    .language-toggle { float: right; }
+  </style>
+</head>
+<body>
+  <header>
+    KP Auto Parts Japan<br>Auto Import
+  </header>
+
+  <nav>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="language-toggle">
+      <a href="#">🇺🇸 EN</a> | <a href="#">🇱🇦 LO</a>
+    </div>
+  </nav>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="product1.jpg" alt="Product 1" width="100%">
+        <h3>Engine Block</h3>
+        <p>$500</p>
+      </div>
+      <div class="product-item">
+        <img src="product2.jpg" alt="Product 2" width="100%">
+        <h3>Truck Radiator</h3>
+        <p>$320</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>KP Auto Parts Japan specializes in importing quality truck parts from Japan to Laos. We ensure reliable and affordable parts for every business.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +856 20 xxx xxxx<br>
+       📧 contact@kpautoparts.la<br>
+       📍 Vientiane, Laos</p>
+  </section>
+</body>
+</html>
