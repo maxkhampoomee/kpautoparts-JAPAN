@@ -3,39 +3,119 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KP Auto Parts Japan</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; }
-    header { background: #c00; color: white; padding: 1rem; text-align: center; }
-    nav { background: #f4f4f4; padding: 1rem; text-align: center; }
-    nav a { margin: 0 1rem; text-decoration: none; color: #333; }
-    section { padding: 2rem; }
-    .product { border: 1px solid #ddd; padding: 1rem; margin: 1rem auto; max-width: 600px; }
-    .product img { width: 100%; height: auto; }
-    footer { background: #eee; padding: 1rem; text-align: center; }
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f8f8f8; }
+    header { background-color: #c62828; color: white; padding: 20px; display: flex; align-items: center; justify-content: space-between; }
+    header img { height: 50px; }
+    header select { padding: 5px; font-size: 14px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    .hero {
+      background-image: url('images/hero.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 { font-size: 48px; margin-bottom: 10px; }
+    .hero h2 { font-size: 28px; font-weight: normal; }
+    .section { padding: 40px 20px; max-width: 1100px; margin: auto; }
+    .section h2 { color: #c62828; }
+    .product {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card-body { padding: 20px; }
+    .card-body h3 { margin-top: 0; color: #333; }
+    .card-body p { margin: 10px 0; }
+    footer {
+      background: #333; color: white; padding: 20px; text-align: center;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>KP Auto Parts Japan</h1>
-    <p>นำเข้ารถบรรทุกและอะไหล่จากญี่ปุ่น</p>
+    <div style="display:flex; align-items:center;">
+      <img src="images/logo.png" alt="KP Auto Parts Japan" />
+      <h1 style="margin-left: 10px;">KP Auto Parts Japan</h1>
+    </div>
+    <nav>
+      <a href="#about">เกี่ยวกับเรา</a>
+      <a href="#products">สินค้า</a>
+      <a href="#contact">ติดต่อ</a>
+      <select>
+        <option>ไทย</option>
+        <option>English</option>
+        <option>日本語</option>
+      </select>
+    </nav>
   </header>
-  <nav>
-    <a href="index.html">หน้าแรก</a>
-    <a href="about.html">เกี่ยวกับเรา</a>
-    <a href="products.html">สินค้า</a>
-    <a href="contact.html">ติดต่อ</a>
-  </nav>
-  <section>
-    <h2>สินค้าแนะนำ</h2>
+
+  <section class="hero">
+    <h1>KP Auto Parts Japan</h1>
+    <h2>Auto Import</h2>
+  </section>
+
+  <section id="about" class="section">
+    <h2>เกี่ยวกับเรา / About Us / 会社概要</h2>
+    <p>
+      KP Auto Parts Japan เป็นบริษัทที่เชี่ยวชาญด้านการนำเข้ารถบรรทุกและอะไหล่จากญี่ปุ่นเข้าสู่ประเทศลาว<br />
+      KP Auto Parts Japan specializes in importing trucks and auto parts from Japan to Laos.<br />
+      当社は、日本からラオスへのトラックおよび自動車部品の輸入を専門とする企業です。
+    </p>
+  </section>
+
+  <section id="products" class="section">
+    <h2>สินค้า / Products / 商品情報</h2>
     <div class="product">
-      <img src="images/giga10.jpg" alt="ISUZU GIGA 10 ล้อ" />
-      <h3>ISUZU GIGA 10 ล้อ</h3>
-      <p>เครื่องยนต์ 6UZ1, ปี 2022, พร้อมใช้งาน</p>
-      <p><strong>ราคา:</strong> สอบถามเพิ่มเติม</p>
+      <div class="card">
+        <img src="images/TP5855189_1.jpg" alt="ISUZU GIGA 10 ล้อ" />
+        <div class="card-body">
+          <h3>ISUZU GIGA 10 ล้อ</h3>
+          <p>ปี 2022, เครื่องยนต์ 6UZ1, พร้อมใช้งาน<br />2022, Engine 6UZ1, Ready to use<br />2022年式, エンジン6UZ1, 即使用可能</p>
+          <p><strong>ราคา / Price / 価格:</strong> สอบถามเพิ่มเติม / Contact Us</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/TP5845233_2.jpg" alt="ISUZU FRR 6 ล้อ DUMP" />
+        <div class="card-body">
+          <h3>ISUZU FRR 6 ล้อ DUMP</h3>
+          <p>ปี 2024, เครื่องยนต์ 4HK1, สภาพใหม่<br />2024, Engine 4HK1, New condition<br />2024年式, エンジン4HK1, 新品同様</p>
+          <p><strong>ราคา / Price / 価格:</strong> สอบถามเพิ่มเติม / Contact Us</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/รถบรรทุกพ่วงนำเข้าจากญี่ปุ่น.png" alt="รถบรรทุกพ่วง" />
+        <div class="card-body">
+          <h3>รถบรรทุกพ่วงนำเข้าจากญี่ปุ่น</h3>
+          <p>นำเข้าจากญี่ปุ่นโดยตรง พร้อมใช้งาน<br />Direct import from Japan, Ready to use<br />日本から直接輸入、即使用可能</p>
+          <p><strong>ราคา / Price / 価格:</strong> สอบถามเพิ่มเติม / Contact Us</p>
+        </div>
+      </div>
     </div>
   </section>
+
+  <section id="contact" class="section">
+    <h2>ติดต่อเรา / Contact / お問い合わせ</h2>
+    <p>โทร / Tel / 電話: +856 20 51696868</p>
+    <p>Facebook: <a href="https://www.facebook.com/max.khampoomey">max.khampoomey</a></p>
+    <p>Line ID: maxspkk</p>
+    <p>Email: kpautoparts.la@gmail.com</p>
+    <p>ที่อยู่ / Address / 住所: เวียงจันทน์, สปป.ลาว / Vientiane, Laos</p>
+  </section>
+
   <footer>
     &copy; 2025 KP Auto Parts Japan
   </footer>
